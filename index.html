@@ -9,15 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Inter:wght@100..900&family=Roboto&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
     <title>W. Notícias</title>
 </head>
 <body>
-    <header class="header-mobile">
+    <header>
         <img src="./assets/images/logo.svg" alt="Logo do site de notícias W.">
 
-        <button><img src="./assets/images/icon-menu.svg" alt="ícone do menu hambúrger"></button>
+        <button>
+            <img src="./assets/images/icon-menu.svg" alt="ícone do menu hambúrger">
+        </button>
 
-        <nav>
+        <nav class="mobile">
             <button>
                 <img src="./assets/images/icon-menu-close.svg" alt="ícone de X para fechar menu">
             </button>
@@ -29,11 +32,22 @@
             <a href="#">Categorias</a>
         </nav>
 
+        <nav class="desktop">
+            <a href="#">Home</a>
+            <a href="#">Novo</a>
+            <a href="#">Popoular</a>
+            <a href="#">Trending</a>
+            <a href="#">Categorias</a>
+        </nav>
+
     </header>
 
     <main>
         <section class="primeira-secao">
-            <img src="./assets/images/image-web-3-mobile.jpg" alt="ícone de puzzle colorido">
+            <picture>
+                <source media="(min-width: 700px)" srcset="/assets/images/image-web-3-desktop.jpg">
+                <img src="./assets/images/image-web-3-mobile.jpg" alt="ícone de puzzle colorido">
+            </picture>
 
             <h1>O Futuro Brilhante da Web 3.0?</h1>
 
@@ -92,6 +106,5 @@
 
     </main>
 
-    <script src="./script.js"></script>
 </body>
 </html>
